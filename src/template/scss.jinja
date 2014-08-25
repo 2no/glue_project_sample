@@ -1,0 +1,21 @@
+{% for image in images %}%{{ image.label|lower }}{{ image.pseudo }}{%- if not image.last %}, {% endif %}{%- endfor %} {
+    background-image:url('../img/{{ sprite_filename }}');
+    background-repeat:no-repeat;
+}
+{% for image in images %}
+%{{ image.label|lower }}{{ image.pseudo }} {
+    background-position:{{ image.x ~ ('px' if image.x) }} {{ image.y ~ ('px' if image.y) }};
+    width:{{ image.width }}px;
+    height:{{ image.height }}px;
+}
+{% endfor %}
+${{ name }}-map: (
+{%- for image in images %}
+    {{ image.filename|lower|replace('.png', '') }}: (
+        width: {{ image.width }}px,
+        height: {{ image.height }}px,
+        x: {{ image.x }}px,
+        y: {{ image.y }}px,
+    ),
+{%- endfor %}
+);

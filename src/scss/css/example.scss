@@ -1,0 +1,7 @@
+@import "_sprite/icons";
+
+@each $icon in add, delete, anchor {
+	.icons-#{$icon} {
+		@extend %sprite-icons-#{$icon};
+	}
+}
