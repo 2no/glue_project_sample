@@ -1,4 +1,4 @@
-@import "_sprite/icons";
+@import "_sprite/*";
 
 @each $icon in add, delete, anchor {
 	.icons-#{$icon} {

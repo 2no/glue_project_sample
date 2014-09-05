@@ -31,6 +31,7 @@ gulp.task('scss', function() {
     .pipe($.rubySass({
         bundleExec: true
       , style: 'expanded'
+      , require: ['sass-globbing']
     }))
     .pipe($.autoprefixer('last 2 version'))
     .pipe(gulp.dest(paths.rootDir))
