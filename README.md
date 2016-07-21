@@ -8,7 +8,7 @@ This plugin requires
 * [gulp](https://github.com/wearefractal/gulp)
 * [glue](http://glue.readthedocs.org/en/latest/)
 
-### Instration
+### Installation
 
 ```
 $ git clone https://github.com/wakuworks/glue_project_sample.git
